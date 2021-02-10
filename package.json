@@ -1,0 +1,51 @@
+{
+  "name": "@rivalis/protocol-websocket",
+  "version": "0.0.1",
+  "description": "rivalis websocket protocol",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run build:src && npm run build:tsd",
+    "test": "npm run test:linter && npm run test:unit",
+    "prepublishOnly": "npm run build",
+    "build:src": "npx rmdir-cli lib && babel src --out-dir lib",
+    "build:tsd": "npx typescript -d --allowJs --emitDeclarationOnly --outDir ./lib src/*.js",
+    "test:linter": "eslint src",
+    "test:unit": "mocha --recursive --require @babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rivalis/rivalis-protocol-websocket.git"
+  },
+  "keywords": [
+    "rivalis",
+    "game",
+    "multiplayer",
+    "framework",
+    "protocol",
+    "websocket"
+  ],
+  "author": "Daniel Kalevski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rivalis/rivalis-protocol-websocket/issues"
+  },
+  "homepage": "https://github.com/rivalis/rivalis-protocol-websocket#readme",
+  "devDependencies": {
+    "@babel/cli": "7.12.13",
+    "@babel/core": "7.12.13",
+    "@babel/eslint-parser": "7.12.13",
+    "@babel/node": "7.12.13",
+    "@babel/plugin-proposal-class-properties": "7.12.13",
+    "@babel/preset-env": "7.12.13",
+    "@babel/register": "7.12.13",
+    "@types/node": "14.14.25",
+    "chai": "4.3.0",
+    "eslint": "7.19.0",
+    "mocha": "8.2.1",
+    "parcel": "1.12.4",
+    "sinon": "9.2.4"
+  },
+  "dependencies": {
+    "@rivalis/core": "^0.3.0"
+  }
+}
