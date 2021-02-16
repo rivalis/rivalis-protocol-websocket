@@ -1,6 +1,6 @@
 {
   "name": "@rivalis/protocol-websocket",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "rivalis websocket protocol",
   "main": "lib/index.js",
   "scripts": {
@@ -46,7 +46,7 @@
     "sinon": "9.2.4"
   },
   "dependencies": {
-    "@rivalis/core": "^0.3.1",
+    "@rivalis/core": "^0.4.0",
     "ws": "^7.4.3"
   }
 }
